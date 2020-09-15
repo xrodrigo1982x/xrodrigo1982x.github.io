@@ -1,5 +1,5 @@
 title: Codebreak Station
-email: your-email@example.com
+email: codebreakstation@gmail.com
 description: >-
   Here I write about some practices in software development
 baseurl: ""
@@ -20,5 +20,5 @@ footer:
   show_powered_by: false
   contact:
     - name: Email
-      value: yourmail@domain.com
-      link: mailto:yourmail@domain.com
+      value: codebreakstation@gmail.com
+      link: mailto:codebreakstation@gmail.com

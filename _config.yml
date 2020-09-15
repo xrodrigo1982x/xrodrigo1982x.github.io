@@ -9,7 +9,6 @@ bitbucket_username: oooo
 linkedin_username: oooo
 permalink: /:title
 
-theme: bay_jekyll_theme
 plugins:
   - jekyll-feed
 
@@ -23,10 +22,3 @@ footer:
     - name: Email
       value: yourmail@domain.com
       link: mailto:yourmail@domain.com
-  follow:
-    - name: LinkedIn
-      link: http://linkedin.com/in/YourLinkedInUsername
-    - name: GitHub
-      link: http://github.com/YourGitHubUsername
-    - name: Bitbucket
-      link: http://github.com/YourGitHubUsername

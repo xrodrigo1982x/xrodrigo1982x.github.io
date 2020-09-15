@@ -6,12 +6,12 @@
 // Our variables
 $base-url: "{{ site.baseurl }}";
 
-$base-font-family: Charter, Georgia, Helvetica, Arial, sans-serif;
-$base-font-size: 14px;
+$base-font-family: 'Roboto', sans-serif;
+$base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.7;
 
-$spacing-unit: 0px;
+$spacing-unit: 30px;
 
 $text-color: #111;
 $background-color: #fdfdfd;

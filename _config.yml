@@ -1,7 +1,7 @@
 title: Codebreak Station
 email: codebreakstation@gmail.com
 description: >-
-  Here I write about some practices in software development
+  Personal blog about some practices in software development mainly in Java, Spring and Flutter
 baseurl: ""
 url: "https://codebreakstation.com"
 github_username: jekyll
@@ -14,11 +14,17 @@ plugins:
 
 header:
   pages:
-    - name: About me
-      slug: /about
+    - name: About
 footer:
   show_powered_by: false
   contact:
     - name: Email
       value: codebreakstation@gmail.com
       link: mailto:codebreakstation@gmail.com
+  follow:
+    - name: Linkedin
+      link: https://www.linkedin.com/in/rodrigo-santos-49b23932
+    - name: Github
+      link: https://github.com/xrodrigo1982x
+    - name: Bitbucket
+      link: https://bitbucket.org/rodrigo82

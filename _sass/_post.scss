@@ -1,3 +1,7 @@
+.post{
+  width: 60%
+}
+
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -31,7 +35,7 @@
 
 .post-meta .post-date {
   text-transform: uppercase;
-  font-size: 120%;
+  font-size: 90%;
 }
 
 .post-content {
@@ -72,7 +76,7 @@
 
 .post-languages {
   font-size: 13px;
-  font-family: Helvetica, sans-serif;
+  font-family: $base-font-family;
   margin-top: 30px;
   margin-bottom: 20px;
 
@@ -93,11 +97,22 @@ div.footnotes {
   text-align: center;
   padding: 1em;
   margin-bottom: 2em;
-  font-family: Helvetica, sans-serif;
+  font-family: $base-font-family;
 
   border-radius: 5px;
 
   a {
     color: #330000;
   }
+}
+
+.draft-label {
+  color: red;
+  text-align: center;
+  border-bottom: red solid 1px;
+}
+
+.post-summary {
+  color: $grey-color-dark;
+  font-size: 90%;
 }

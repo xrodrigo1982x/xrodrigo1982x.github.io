@@ -19,7 +19,7 @@ But thanks to [Sdkman](https://sdkman.io/){:target="_blank", :rel="noreferrer"} 
 
 Sdkman is a tool that helps to install development tools and more things related to Java development. 
 
-[To install Sdkman follow this link how to install Sdkman](https://sdkman.io/install){:target="_blank", :rel="noreferrer"}
+[To install Sdkman follow this link](https://sdkman.io/install){:target="_blank", :rel="noreferrer"}
 
 <br/>
 

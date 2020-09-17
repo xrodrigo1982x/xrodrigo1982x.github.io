@@ -1,26 +1,25 @@
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNL4JWR"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header class="site-header">
-    <div class="wrapper">
-        <a class="site-title" title="Codebreak Station is inspired by Cinderella's song Heartbreak Station" href="{{ "" | prepend: site.baseurl | prepend: site.url }}/">
-        <span>Codebreak {...} Station</span>
-        </a>
-        <nav class="site-nav">
-            <div class="menu">
-                {% for page in site.header.pages %}
-                {% if page.slug and page.slug != "" and page.slug != nil %}
-                {% assign page_link = page.slug %}
-                {% else %}
-                {% assign page_link = "/" | append: page.name | downcase %}
-                {% endif %}
-                {% assign page_link = page_link | absolute_url %}
-                <a href="{{ page_link }}">
-                    {{ page.name }}
-                </a>
-                {% endfor %}
-            </div>
-        </nav>
-    </div>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNL4JWR"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<header>
+    <a class="site-title" title="Codebreak Station is inspired by Cinderella's song Heartbreak Station" href="{{ "" |
+    prepend: site.baseurl | prepend: site.url }}/">
+    <span>Codebreak {...} Station</span>
+    </a>
+    <nav class="site-nav">
+        {% for page in site.header.pages %}
+        {% if page.slug and page.slug != "" and page.slug != nil %}
+        {% assign page_link = page.slug %}
+        {% else %}
+        {% assign page_link = "/" | append: page.name | downcase %}
+        {% endif %}
+        {% assign page_link = page_link | absolute_url %}
+        <a href="{{ page_link }}"> {{ page.name }} </a>
+        {% endfor %}
+    </nav>
 </header>
+<br/>
+<div class="section"></div>
+<br/>

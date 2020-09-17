@@ -1,35 +1,29 @@
-<footer class="site-footer">
-    <div class="wrapper">
-        {%- for contact in site.footer.contact -%}
-        {%- assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" |
-        absolute_url -%}
+<div class="section"></div>
+<footer>
+    <br/>
+    {%- for contact in site.footer.contact -%}
+    {%- assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" |
+    absolute_url -%}
+    <a href="{{ contact.link }}" style="display: block">
+        <img width="16" height="16" src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
+        {%- if contact.value and contact.value != "" and contact.value != nil -%}
+        {{ contact.value }}
+        {%- else -%}
+        {{ contact.name }}
+        {%- endif -%}
+    </a>
+    {%- endfor -%}
 
-        <div>
-            <a href="{{ contact.link }}">
-                <img width="16" height="16" src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
-                {%- if contact.value and contact.value != "" and contact.value != nil -%}
-                {{ contact.value }}
-                {%- else -%}
-                {{ contact.name }}
-                {%- endif -%}
-            </a>
-        </div>
-        {%- endfor -%}
-
-        {%- for follow in site.footer.follow -%}
-        {%- assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" |
-        absolute_url -%}
-        <div>
-            <a href="{{ follow.link }}" target="_blank" rel="noreferrer">
-                <img width="16" height="16" src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
-                {%- if follow.value and follow.value != "" and follow.value != nil -%}
-                {{ follow.value }}
-                {%- else -%}
-                {{ follow.name }}
-                {%- endif -%}
-            </a>
-        </div>
-        {%- endfor -%}
-
-    </div>
+    {%- for follow in site.footer.follow -%}
+    {%- assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" |
+    absolute_url -%}
+    <a href="{{ follow.link }}" target="_blank" rel="noreferrer" style="display: block">
+        <img width="16" height="16" src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
+        {%- if follow.value and follow.value != "" and follow.value != nil -%}
+        {{ follow.value }}
+        {%- else -%}
+        {{ follow.name }}
+        {%- endif -%}
+    </a>
+    {%- endfor -%}
 </footer>

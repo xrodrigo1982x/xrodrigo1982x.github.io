@@ -4,29 +4,25 @@
 
 <body>
 {% include header.html %}
+<div class="wrapper">
+    <br/>
+    {{ content }}
+    <br/>
+    <p class="blog-post-list">
+        {% for post in site.posts %}
 
-<div class="page-content">
-    <div class="wrapper">
-        <h1 class="page-heading">{{ page.title }}</h1>
-        {{ content }}
-
+        {% if post.draft != true %}
+        <span class="blog-post-date">{{ post.date | date: "%F" }}</span>
+        <a href="{{ post.url | replace:" .html","" | prepend: site.baseurl }}" class="blog-post-title">
+        {{ post.title }}
+        </a>
         <br/>
 
-        <p class="blog-post-list">
-            {% for post in site.posts %}
+        {% endif %}
 
-            {% if post.draft != true %}
-            <span class="blog-post-date">{{ post.date | date: "%F" }}</span>
-            <a href="{{ post.url | replace:" .html","" | prepend: site.baseurl }}" class="blog-post-title">
-            {{ post.title }}
-            </a>
-            <br/>
-
-            {% endif %}
-
-            {% endfor %}
-        </p>
-    </div>
+        {% endfor %}
+    </p>
+    <br/>
 </div>
 
 {% include footer.html %}

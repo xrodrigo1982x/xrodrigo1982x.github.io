@@ -1,33 +1,34 @@
 <footer class="site-footer">
-    <div class="wrapper row">
+    <div class="wrapper">
         {%- for contact in site.footer.contact -%}
         {%- assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" |
         absolute_url -%}
 
-        <a href="{{ contact.link }}" class="col-xs-12">
-            <img src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
-            {%- if contact.value and contact.value != "" and contact.value != nil -%}
-            {{ contact.value }}
-            {%- else -%}
-            {{ contact.name }}
-            {%- endif -%}
-        </a>
-
+        <div>
+            <a href="{{ contact.link }}">
+                <img src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
+                {%- if contact.value and contact.value != "" and contact.value != nil -%}
+                {{ contact.value }}
+                {%- else -%}
+                {{ contact.name }}
+                {%- endif -%}
+            </a>
+        </div>
         {%- endfor -%}
 
         {%- for follow in site.footer.follow -%}
         {%- assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" |
         absolute_url -%}
-
-        <a href="{{ follow.link }}" target="_blank" class="col-xs-12">
-            <img src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
-            {%- if follow.value and follow.value != "" and follow.value != nil -%}
-            {{ follow.value }}
-            {%- else -%}
-            {{ follow.name }}
-            {%- endif -%}
-        </a>
-
+        <div>
+            <a href="{{ follow.link }}" target="_blank">
+                <img src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
+                {%- if follow.value and follow.value != "" and follow.value != nil -%}
+                {{ follow.value }}
+                {%- else -%}
+                {{ follow.name }}
+                {%- endif -%}
+            </a>
+        </div>
         {%- endfor -%}
 
     </div>

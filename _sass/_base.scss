@@ -1,17 +1,19 @@
 * {
   padding: 0;
+  margin: 0;
   font-family: $base-font-family;
   -webkit-font-smoothing: antialiased;
-  margin: 2px;
+}
+
+html {
+  background-color: $grey-color-light;
 }
 
 body {
-  padding: 10px;
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-weight: 300;
   color: $text-color;
-  background-color: $background-color;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -29,8 +31,7 @@ a {
 
   &:hover {
     color: $brand-color;
-    text-decoration: underline;
-    background-color: $grey-color-light;
+    text-decoration: none;
   }
 
   &:visited {
@@ -43,45 +44,10 @@ a {
 }
 
 blockquote {
-  border-left: 4px solid $grey-color-light;
+  border-left: 4px solid $grey-color-dark;
+  background-color: $grey-color-light;
   padding-left: $spacing-unit / 2;
   font-size: 100%;
-  letter-spacing: -0.5px;
-  font-style: italic;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-pre, code {
-  font-size: 15px;
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: scroll;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 .categories {
@@ -98,11 +64,95 @@ pre {
   border-bottom: solid 1px $grey-color-light;
 }
 
-.site-title {
-  font-size: 2rem;
+.photo {
+  margin-right: 1rem;
 }
 
-.site-nav {
-  z-index: 10;
-  float: right;
+p {
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+header {
+  background-color: $background-color;
+  border-bottom: $grey-color-dark solid 1px;
+  text-align: center;
+  padding: 1rem 0;
+
+  .title {
+    font-size: 1.9rem;
+
+    .brackets {
+      color: red;
+      font-weight: bold;
+    }
+
+    .name {
+      color: black;
+    }
+  }
+
+  .sub-title {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  nav {
+    color: black;
+    margin-top: 1rem;
+    display: block;
+    font-size: 1rem;
+  }
+
+}
+
+.posts {
+  width: 60%;
+  margin: 0 auto;
+
+  a {
+    color: black;
+  }
+
+  .post-item {
+    padding: .5rem;
+    display: table;
+
+    border-bottom: $grey-color-dark solid 1px;
+
+    .title, .space, .date {
+      display: table-cell;
+    }
+
+    .title, .date {
+      white-space: nowrap;
+    }
+
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .space{
+      width: 100%;
+    }
+  }
+}
+
+.hovered {
+  border-bottom: transparent solid 1px;
+}
+
+.hovered:hover{
+  border-bottom: $grey-color-dark solid 1px;
+}
+
+.post{
+  width: 60%;
+  margin-left: 10%;
+}
+
+footer {
+  border-top: $grey-color-dark solid 1px;
+  text-align: center;
+  padding-bottom: 1rem;
 }

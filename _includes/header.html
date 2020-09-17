@@ -4,11 +4,15 @@
 </noscript>
 
 <header>
-    <a class="site-title" title="Codebreak Station is inspired by Cinderella's song Heartbreak Station" href="{{ "" |
-    prepend: site.baseurl | prepend: site.url }}/">
-    <span>Codebreak {...} Station</span>
-    </a>
-    <nav class="site-nav">
+    <div class="title">
+        <a title="Codebreak Station is inspired by Cinderella's song Heartbreak Station" href="{{ ""
+        |
+        prepend: site.baseurl | prepend: site.url }}/">
+        <span class="brackets">{...}</span><span class="name">CodebreakStation</span>
+        </a>
+    </div>
+    <div class="sub-title">{{site.description}}</div>
+    <nav>
         {% for page in site.header.pages %}
         {% if page.slug and page.slug != "" and page.slug != nil %}
         {% assign page_link = page.slug %}

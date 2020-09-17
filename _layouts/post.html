@@ -3,36 +3,36 @@
 {% include head.html %}
 <body>
 {% include header.html %}
-
-<header>
-    {% if page.draft %}
-    <h3 class="draft-label">Draft</h3>
-    {% endif %}
-    <h2 class="post-title">
-        {% if page.headline_formatted_title %}
-        {{ page.headline_formatted_title | newline_to_br }}
-        {% else %}
-        {{ page.title }}
+<div class="post">
+    <div class="post-header">
+        {% if page.draft %}
+        <h3 class="draft-label">Draft</h3>
         {% endif %}
-    </h2>
-    {% if page.subtitle %}<h1 class="post-subtitle">{{ page.subtitle }}</h1>{% endif %}
-    <p class="post-meta">
-        <span class="post-date">{{ page.date | date: "%F" }}</span>
-        {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-    </p>
-    {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
-</header>
-<br/>
-<article>
-    {{ content }}
-
-    <div class="categories">
-        {% for category in page.categories %}
-        <span class="category">{{category}}</span>
-        {% endfor %}
+        <h1>
+            {% if page.headline_formatted_title %}
+            {{ page.headline_formatted_title | newline_to_br }}
+            {% else %}
+            {{ page.title }}
+            {% endif %}
+        </h1>
+        {% if page.subtitle %}<h1 class="post-subtitle">{{ page.subtitle }}</h1>{% endif %}
+        <p class="post-meta">
+            <span class="post-date">{{ page.date | date: "%F" }}</span>
+            {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+        </p>
+        {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
     </div>
-</article>
+    <br/>
+    <article>
+        {{ content }}
 
+        <div class="categories">
+            {% for category in page.categories %}
+            <span class="category">{{category}}</span>
+            {% endfor %}
+        </div>
+    </article>
+</div>
 <br/>
 
 {% include footer.html %}

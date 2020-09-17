@@ -6,7 +6,7 @@
     })(window,document,'script','dataLayer','GTM-MNL4JWR');</script>
 
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     {%- assign page_is_article = false -%}
@@ -26,6 +26,10 @@
     {%- assign page_description = page_description | append: page.blurb -%}
     {%- else -%}
     {%- assign page_description = site.description -%}
+    {%- endif -%}
+
+    {%- if page.summary -%}
+    {%- assign page_description = page.summary -%}
     {%- endif -%}
 
     {%- assign page_url = page.url | replace: "index.html","" | replace: ".html","" | prepend: site.baseurl | prepend: site.url -%}

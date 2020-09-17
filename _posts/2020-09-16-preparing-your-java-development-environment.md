@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Preparing your development environment
+title:  Preparing your Java development environment
 summary: A short tutorial on how to prepare your Java development environment         
 categories: java jdk sdkman maven
 ---
@@ -13,7 +13,7 @@ We are going to stick to two distributions, first Oracle's OpenJDK and later Gra
 
 <br/>
 
-# Sdkman
+## Sdkman
 Some years ago it was really annoying to configure a machine to develop in Java. 
 But thanks to [Sdkman](https://sdkman.io/){:target="_blank", :rel="noreferrer"} it's much easier now!
 
@@ -23,6 +23,7 @@ Sdkman is a tool that helps to install development tools and more things related
 
 <br/>
 
+## Java
 Let's install the JDK for Java 14, which is the current version.  
 So, to install JDK 14 is as easy as: 
 > **sdk install java 14.0.2-open**
@@ -41,13 +42,13 @@ To be sure the current version running is the chosen one:
 > OpenJDK 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
 
 <br/>
-
+## Maven
 Ok! Now you have a Java development kit, you can write code, but depending on the number of files your program has it becomes annoying.
 That's why we install [Maven](https://maven.apache.org/){:target="_blank", :rel="noreferrer"}.  
 Maven helps you compile and build Java projects. It also manages external libraries and frameworks you're going to use in your projects.   
 <br/>
 With Sdkman it's easy as:
-> sdk install maven 3.6.3
+> **sdk install maven 3.6.3**
 
 <br/>
 

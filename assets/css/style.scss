@@ -17,9 +17,9 @@ $text-color: #111;
 $background-color: #fdfdfd;
 $brand-color: #053886;
 
-$grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
+$grey-color: #d0d0d0;
+$grey-color-light: lighten($grey-color, 15%);
+$grey-color-dark: darken($grey-color, 10%);
 
 $on-mobile: 500px;
 $on-laptop: 800px;

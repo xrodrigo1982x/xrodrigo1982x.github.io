@@ -55,7 +55,7 @@ blockquote {
 }
 
 .category {
-  border: solid 1px $grey-color-light;
+  border: solid 1px $grey-color-dark;
   border-radius: 100px;
   padding: 2px 10px;
 }
@@ -107,8 +107,12 @@ header {
 }
 
 .posts {
-  width: 60%;
-  margin: 0 auto;
+  margin: auto 1rem;
+
+  @include media-query($on-laptop) {
+    width: 60%;
+    margin: auto;
+  }
 
   a {
     color: black;
@@ -132,7 +136,7 @@ header {
       font-size: 1.6rem;
     }
 
-    .space{
+    .space {
       width: 100%;
     }
   }
@@ -142,13 +146,16 @@ header {
   border-bottom: transparent solid 1px;
 }
 
-.hovered:hover{
+.hovered:hover {
   border-bottom: $grey-color-dark solid 1px;
 }
 
-.post{
-  width: 60%;
-  margin-left: 10%;
+.post {
+  margin: auto 1rem;
+  @include media-query($on-laptop) {
+    width: 60%;
+    margin-left: 10%;
+  }
 }
 
 footer {

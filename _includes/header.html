@@ -9,10 +9,8 @@
         <img src="{{ "/assets/img/title.png" | absolute_url }}" alt="{{ site.title }}" />
         <span style="padding: 3px">Station</span>
         </a>
-
         <nav class="site-nav">
             <a href="#" class="menu-icon"></a>
-
             <div class="menu">
                 {% for page in site.header.pages %}
                 {% if page.slug and page.slug != "" and page.slug != nil %}

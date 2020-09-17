@@ -20,7 +20,7 @@
         {%- assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" |
         absolute_url -%}
         <div>
-            <a href="{{ follow.link }}" target="_blank">
+            <a href="{{ follow.link }}" target="_blank" rel="noreferrer">
                 <img src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
                 {%- if follow.value and follow.value != "" and follow.value != nil -%}
                 {{ follow.value }}

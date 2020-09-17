@@ -2,6 +2,7 @@
 layout: post
 title:  Preparing your Java development environment
 summary: A short tutorial on how to prepare your Java development environment         
+author: Rodrigo Silva
 categories: java jdk sdkman maven
 ---
 

@@ -11,6 +11,8 @@ permalink: /:title
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 header:
   pages:

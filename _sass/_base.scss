@@ -25,9 +25,12 @@ a {
   text-decoration: none;
   color: $brand-color;
 
+  padding: 5px;
+
   &:hover {
     color: $brand-color;
     text-decoration: underline;
+    background-color: $grey-color-light;
   }
 
   &:visited {

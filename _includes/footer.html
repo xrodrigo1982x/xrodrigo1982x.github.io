@@ -4,7 +4,7 @@
     {%- for contact in site.footer.contact -%}
     {%- assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" |
     absolute_url -%}
-    <a href="{{ contact.link }}" style="display: block">
+    <a href="{{ contact.link }}" style="display: block;">
         <img width="16" height="16" src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
         {%- if contact.value and contact.value != "" and contact.value != nil -%}
         {{ contact.value }}

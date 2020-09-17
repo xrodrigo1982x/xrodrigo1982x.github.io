@@ -15,11 +15,11 @@ We are going to stick to two distributions, first Oracle's OpenJDK and later Gra
 
 # Sdkman
 Some years ago it was really annoying to configure a machine to develop in Java. 
-But thanks to [Sdkman](https://sdkman.io/){:target="_blank"} it's much easier now!
+But thanks to [Sdkman](https://sdkman.io/){:target="_blank", :rel="noreferrer"} it's much easier now!
 
 Sdkman is a tool that helps to install development tools and more things related to Java development. 
 
-[To install Sdkman follow this link how to install Sdkman](https://sdkman.io/install){:target="_blank"}
+[To install Sdkman follow this link how to install Sdkman](https://sdkman.io/install){:target="_blank", :rel="noreferrer"}
 
 <br/>
 
@@ -43,7 +43,7 @@ To be sure the current version running is the chosen one:
 <br/>
 
 Ok! Now you have a Java development kit, you can write code, but depending on the number of files your program has it becomes annoying.
-That's why we install [Maven](https://maven.apache.org/){:target="_blank"}.  
+That's why we install [Maven](https://maven.apache.org/){:target="_blank", :rel="noreferrer"}.  
 Maven helps you compile and build Java projects. It also manages external libraries and frameworks you're going to use in your projects.   
 <br/>
 With Sdkman it's easy as:

@@ -6,7 +6,7 @@
 
         <div>
             <a href="{{ contact.link }}">
-                <img src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
+                <img width="16" height="16" src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}"/>
                 {%- if contact.value and contact.value != "" and contact.value != nil -%}
                 {{ contact.value }}
                 {%- else -%}
@@ -21,7 +21,7 @@
         absolute_url -%}
         <div>
             <a href="{{ follow.link }}" target="_blank" rel="noreferrer">
-                <img src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
+                <img width="16" height="16" src="{{ follow_icon_path }}" alt="{{ follow.name | downcase }}"/>
                 {%- if follow.value and follow.value != "" and follow.value != nil -%}
                 {{ follow.value }}
                 {%- else -%}

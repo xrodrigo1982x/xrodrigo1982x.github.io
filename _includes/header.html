@@ -6,7 +6,7 @@
     <div class="wrapper">
         <a class="site-title" title="Codebreak Station is inspired by Cinderella's song Heartbreak Station" href="{{ "" | prepend: site.baseurl | prepend: site.url }}/">
         <span>Codebreak</span>
-        <img src="{{ "/assets/img/title.png" | absolute_url }}" alt="{{ site.title }}" />
+        <img width="32" height="32" src="{{ "/assets/img/title.png" | absolute_url }}" alt="{{ site.title }}" />
         <span>Station</span>
         </a>
         <nav class="site-nav">
@@ -18,7 +18,7 @@
                 {% assign page_link = "/" | append: page.name | downcase %}
                 {% endif %}
                 {% assign page_link = page_link | absolute_url %}
-                <a class="page-link" href="{{ page_link }}">
+                <a href="{{ page_link }}">
                     {{ page.name }}
                 </a>
                 {% endfor %}

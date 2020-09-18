@@ -119,24 +119,16 @@ header {
 
   .post-item {
     padding: .5rem;
-    display: table;
 
     border-bottom: $grey-color-dark solid 1px;
-
-    .title, .space, .date {
-      display: table-cell;
-    }
-
-    .title, .date {
-      white-space: nowrap;
-    }
 
     .title {
       font-size: 1.6rem;
     }
 
-    .space {
+    .date{
       width: 100%;
+      text-align: right;
     }
   }
 }

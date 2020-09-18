@@ -10,11 +10,10 @@
     {% for post in site.posts %}
     {% if post.draft != true %}
     <a href="{{ post.url | replace:" .html","" | prepend: site.baseurl }}" >
-    <div class="post-item">
-        <span class="title">{{ post.title }}</span>
-        <span class="space"></span>
-        <span class="date">{{ post.date | date: "%F" }}</span>
-    </div>
+        <div class="post-item">
+            <div class="title">{{ post.title }}</div>
+            <div class="date">{{ post.date | date: "%F" }}</div>
+        </div>
     </a>
     {% endif %}
     {% endfor %}

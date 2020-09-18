@@ -77,17 +77,19 @@ header {
   border-bottom: $grey-color-dark solid 1px;
   text-align: center;
   padding: 1rem 0;
+  font-size: 1.9rem;
 
   .title {
-    font-size: 1.9rem;
 
     .brackets {
       color: red;
       font-weight: bold;
+      font-size: 1.9rem;
     }
 
     .name {
       color: black;
+      font-size: 1.9rem;
     }
   }
 
@@ -118,17 +120,12 @@ header {
   }
 
   .post-item {
-    padding: .5rem;
-
-    border-bottom: $grey-color-dark solid 1px;
+    padding: 1rem;
+    background-color: darken($grey-color-light, 3%);
+    box-shadow: 4px 4px 2px -4px;
 
     .title {
       font-size: 1.6rem;
-    }
-
-    .date{
-      width: 100%;
-      text-align: right;
     }
   }
 }

@@ -8,6 +8,7 @@ github_username: jekyll
 bitbucket_username: oooo
 linkedin_username: oooo
 permalink: /:title
+date_format: "%B %d, %Y"
 
 plugins:
   - jekyll-feed

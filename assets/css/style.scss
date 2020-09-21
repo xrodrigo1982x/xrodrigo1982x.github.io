@@ -19,11 +19,24 @@ $grey-color: #d0d0d0;
 $grey-color-light: lighten($grey-color, 15%);
 $grey-color-dark: darken($grey-color, 10%);
 
-$on-mobile: 500px;
+$on-mobile: 0px;
 $on-laptop: 1100px;
+$boundary: 1100px;
 
 @mixin media-query($device) {
   @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media only screen and (max-width: $boundary) {
+    @content;
+  }
+}
+
+@mixin non-mobile() {
+  @media only screen and (min-width: $boundary) {
     @content;
   }
 }

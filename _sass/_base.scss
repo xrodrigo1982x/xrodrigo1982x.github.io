@@ -155,3 +155,31 @@ footer {
 .post-navigation {
   padding-top: 1rem;
 }
+
+.photo-container {
+  @include media-query($on-laptop) {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.about {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include non-mobile() {
+    flex-direction: row;
+  }
+
+  @include mobile() {
+    flex-direction: column;
+  }
+}
+
+.photo-container {
+
+}
+
+.about-content {
+
+}

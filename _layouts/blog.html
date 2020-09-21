@@ -7,17 +7,28 @@
     {{ content }}
     <br/>
     <h2>Posts</h2>
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     {% if post.draft != true %}
     <a href="{{ post.url | replace:" .html","" | prepend: site.baseurl }}" >
-        <div class="post-item">
-            <div class="title">{{ post.title }}</div>
-            <div>{{post.summary}}</div>
-            <div class="date">{{ post.date | date: site.date_format }}</div>
-        </div>
+    <div class="post-item">
+        <div class="title">{{ post.title }}</div>
+        <div>{{post.summary}}</div>
+        <div class="date">{{ post.date | date: site.date_format }}</div>
+    </div>
     </a>
     {% endif %}
     {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% endif %}
+        <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% endif %}
+    </div>
+    {% endif %}
 </div>
 
 {% include footer.html %}
